@@ -97,14 +97,142 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*Globales*/
 
+html
+{
+    box-sizing: border-box;
+}
 
+*,*:after,*:before
+{
+    box-sizing: inherit;
+}
 
+body
+{
+    background-color: #f2f2f2;
+}
 
+h2
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-align: center;
+}
 
+h2:after
+{
+    content: "";
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width: 100px;
+    display: block;
+}
 
+/*Header*/
 
+.hero
+{
+    background-image: url(../img/encabezado.jpg);
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+}
 
+.contenido-header
+{
+    padding-top: 40px;
+}
+
+@media only screen and (min-width: 786px)
+{
+  .contenido-header
+    {
+        padding-top: 10px;
+    }  
+}
+
+nav.redes-sociales
+{
+    text-align: center;
+}
+
+nav.redes-sociales a
+{
+    color: #fff;
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+.informacion-evento
+{
+    text-align: center;
+    color: #fff;
+}
+
+@media only screen and (min-width: 786px){
+    .informacion-evento
+    {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
+
+.informacion-evento p 
+{
+    margin: 0;
+    display: inline;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.informacion-evento p i
+{
+    color: #fe4918;
+    font-size: 2rem;
+    margin-right: 8px;
+}
+
+p.fecha
+{
+    float: left;
+}
+
+p.ciudad
+{
+    float: right;
+    text-align: right;
+}
+
+p.slogan
+{
+    text-transform: none!important;
+}
+
+p.slogan span
+{
+    font-weight: bold;
+}
+
+h1.nombre-sitio
+{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 5.9vw;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px)
+{
+    h1.nombre-sitio
+{
+    font-size: 11.5vw;
+    margin:0;
+    line-height: 1;
+}
 
 
 
