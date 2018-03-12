@@ -761,6 +761,14 @@ div.tabla-precio p.numero
 
 /*Fin Tabla de precios*/
 
+/*Mapa*/
+div.mapa
+{
+    height: 420px;
+    background-color: green
+}
+/*Fin Mapa*/
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
