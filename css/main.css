@@ -888,7 +888,25 @@ div.newsletter .contenido h3
     font-family: 'PT Sans', sans-serif;
 }
 
-/*NewsLetter Testimoniales*/
+/*Fin NewsLetter*/
+div.cuenta-regresiva ul li
+{
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    div.cuenta-regresiva ul li
+    {
+        width: 25%;
+        float: left;
+    }
+}
+/*Cuenta Regresiva*/
+/*Fin Cuenta Regresiva*/
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
