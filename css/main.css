@@ -852,6 +852,43 @@ footer.info-testimonial cite span
     margin: 5px;
 }
 /*Fin Testimoniales*/
+
+/*NewsLetter*/
+div.newsletter
+{
+    position: relative;
+    height: auto;
+}
+
+div.newsletter:before
+{
+    content: "";
+    background-image: url(../img/bg-newsletter.jpg);
+}
+
+div.newsletter .contenido
+{
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+div.newsletter .contenido p
+{
+    font-size: 1.2em;
+    text-transform: lowercase;
+}
+
+div.newsletter .contenido h3
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 7vw;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/*NewsLetter Testimoniales*/
 /* ==========================================================================
    Helper classes
    ========================================================================== */
