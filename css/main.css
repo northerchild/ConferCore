@@ -905,7 +905,62 @@ div.cuenta-regresiva ul li
     }
 }
 /*Cuenta Regresiva*/
-/*Fin Cuenta Regresiva*/
+/*Footer*/
+footer.site-footer
+{
+    background: #353535;
+    padding-top: 40px;
+    margin-top: 20px;
+}
+
+footer .contenedor > div
+{
+    color: #fff;
+    padding: 0px 20px;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+    footer .contenedor > div
+    {
+        width: 33.3%;
+        float: left;
+    }
+}
+
+footer h3
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+}
+
+footer .ultimos-tweets li 
+{
+    margin-bottom: 10px;
+}
+
+footer nav.redes-sociales
+{
+    text-align: left;
+}
+
+footer h3 span 
+{
+    color: #fe4918
+}
+
+p.copyright
+{
+    background-color: #2e2e2e;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0 0 0;
+}
+
+/*Fin Footer*/
 
 /* ==========================================================================
    Helper classes
