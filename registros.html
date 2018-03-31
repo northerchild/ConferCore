@@ -43,7 +43,7 @@
             </div><!--Fin Hero-->
         </header><!--Fin Header-->
         <section class="seccion contenedor">
-            <h2>Registros de Usuarios</h2><!--Datos de usuario-->
+                  <h2>Registros de Usuarios</h2><!--Datos de usuarion-->
                   <form id="registro" class="registro" action="index.html" method="post">
                     
                     <div id="datos_usuario" class="registro caja clearfix">
@@ -63,9 +63,9 @@
                         <input type="email" id="email" name="email" placeholder="Tu Email">
                       </div>
                       <div id="error"></div> 
-                    </div><!--Fin Datos de usuario-->
-
-                     <div id="paquetes" class="paquetes"><!--Paquetes-->
+                    </div><!--Fin Datos de usuarion-->
+                    
+                    <div id="paquetes" class="paquetes"><!--Paquetes-->
                       <h3>Elige el número de boletos</h3>
                       
                          <ul class="lista-precios clearfix">
@@ -121,7 +121,7 @@
                     </li>
                     </div> <!--Fin Paquetes-->
 
-                    <div id="eventos" class="eventos clearfix">
+                  <div id="eventos" class="eventos clearfix">
                          <h3>Elige tus talleres</h3>
                          <div class="caja">
                                <div id="viernes" class="contenido-dia clearfix">
@@ -192,7 +192,45 @@
                                </div> <!--#domingo-->
                            </div><!--.caja-->
                      </div> <!--#eventos-->
-        </section>
+
+                     <div id="resumen" class="resumen"><!--Calculadora de pagos-->
+                      <h3>Pagos y Extras</h3>
+                       <div class="caja clearfix"><!--Inicio Caja-->
+                         <div class="extras"><!--Extras-->
+                           <div class="orden"><!--Orden-->
+                             <label for="camisa_evento">Camisa del evento $10 <small>(Promoción 7% dto.)</small></label>
+                             <input type="number" id="camisa_evento" min="0" size="3" placeholder="0">
+                           </div><!--Fin Orden-->
+                          <div class="orden"><!--Orden-->
+                             <label for="etiquetas">Paquete de 10 etiquetas por $2 <small>(HTML5, CSS3, Javascript, Angular, Vue.js)</small></label>
+                             <input type="number" id="etiquetas" min="0" size="3" placeholder="0">
+                          <div class="orden"><!--Orden-->
+                             <label for="regalo">Seleciona un regalo</label><br>
+                             <select id="regalo" required>
+                               <option value="">Seleciona un regalo</option>
+                               <option value="ETI">Etiquetas</option>
+                               <option value="PUL">Pulsera</option>
+                               <option value="PLU">Pluma</option>
+                             </select>
+                           </div>
+                           </div><!--Fin Orden-->
+                          <input type="button" id="calcular" class="button" value="Calcular">
+                           </div><!--Extras-->
+                           <div class="total"><!--Inicio Total a Pagar-->
+                             <p>Resumen:</p>
+                              <div id="lista_productos">
+                                
+                              </div>
+                              <p>Total:</p>
+                               <div id="suma-total">
+                                 
+                               </div>
+                               <input type="submit" id="btnRegistro" class="button" value="Pagar">
+                           </div><!--Fin Total a Pagar-->
+                       </div><!--Fin Caja-->
+                     </div><!--Fin Calculadora de pagos-->
+
+                  </form>
 
 
         <footer class="site-footer"><!--Footer-->
