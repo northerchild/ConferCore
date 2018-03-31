@@ -962,6 +962,143 @@ p.copyright
 
 /*Fin Footer*/
 
+/*Seccion de registros*/
+form.registro h3
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+    padding-bottom: 12px;
+    font-size: 1.4em;
+}
+
+form.registro label
+{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+h4
+{
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fe4918;
+    padding-bottom: 20px;
+    font-size: 1.2em;
+}
+
+div.caja
+{
+    background: #fff;
+    border: solid 1px #e1e1e1;
+    padding: 10px;
+    margin: 10px;
+}
+
+div.campo
+{
+    padding: 20px;
+}
+
+@media only screen and (min-width:768px) {
+    div.campo
+    {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+div.paquetes .tabla-precio:hover
+{
+    transform: none;
+    box-shadow: none;
+}
+
+div.paquetes .tabla-precio input
+{
+    clear: both;
+    width: 100px;
+    margin: 10px auto 0 auto;
+    display: block;
+}
+
+div.contenido-dia
+{
+    padding: 20px;
+    /*display: none;*/
+}
+
+@media only screen and (min-width: 768px) {
+    div.contenido-dia > div
+    {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+ div.contenido-dia > div p
+ {
+    text-align: left;
+ }
+
+div.contenido-dia > div label
+  {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+div.contenido-dia > div input
+{
+    margin-right: 10px;
+} 
+
+div.contenido-dia > div time
+{
+    color: #fe4918;
+    font-weight: bold;
+    margin-right: 4px;
+} 
+/*Resumen y Pagos*/
+div.resumen p
+{
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+div.resumen div.extras
+{
+    float: left;
+    width: 50%;
+    padding: 30px;
+}
+
+div.extras div.orden
+{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+div.extras div.orden input
+{
+    margin: 10px 0 0 0;
+}
+
+div.resumen div.total
+{
+    float: right;
+    width: 50%;
+    padding: 30px;
+}
+
+div.resumen input
+{
+    display: block;
+    margin: 10px auto;
+}
+
+/*Fin Resumen y Pagos*/
+/*Fin Seccion de registros*/
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
