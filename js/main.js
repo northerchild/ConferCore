@@ -21,6 +21,24 @@
 	const camisas = document.getElementById('camisa_evento')
 	const etiquetas = document.getElementById('etiquetas')
 
+	pase_dia.addEventListener('blur',mostrarDias)
+	pase_dosdia.addEventListener('blur',mostrarDias)
+	pase_completo.addEventListener('blur',mostrarDias)
+
+	//Funcion para mostrar dia dependiendo el boleto
+	function mostrarDias(){
+		let boletoDia = parseInt(pase_dia.value, 10)|| 0,
+			boletDosDias = parseInt(pase_dosdia.value, 10)|| 0,
+			boletoCompleto = parseInt(pase_completo.value, 10)|| 0
+		let diasElegidos = []
+		if (boletoDia >= 1) {diasElegidos.push("viernes")}
+		if (boletDosDias >= 1) {diasElegidos.push("viernes","sabado")}
+		if (boletoCompleto >= 1) {diasElegidos.push("viernes","sabado","domingo")}
+		for (let i = 0; i<diasElegidos.length; i++) {
+				document.getElementById(diasElegidos[i]).style.display = "block"
+			}
+	}
+
 	//Funcion para calcular montos
 	calcular.addEventListener("click",(e)=>{
 		e.preventDefault()
