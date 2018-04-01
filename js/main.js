@@ -27,13 +27,13 @@
 			alert("Por favor escoge tu regalo")
 			regalos.focus()
 		}else{
-			let boletoDia = pase_dia.value,
-				boletDosDias = pase_dosdia.value,
-				boletoCompleto = pase_completo.value,
-				canEtiquetas = etiquetas.value,
-				canCamisas = camisas.value
+			let boletoDia = parseInt(pase_dia.value, 10)|| 0,
+				boletDosDias = parseInt(pase_dosdia.value, 10)|| 0,
+				boletoCompleto = parseInt(pase_completo.value, 10)|| 0,
+				canEtiquetas = parseInt(etiquetas.value, 10)|| 0,
+				canCamisas = parseInt(camisas.value, 10)|| 0
 			let totalPagar = (boletoDia * 30) + (boletDosDias * 45) + (boletoCompleto * 50) + ((canCamisas * 10) * .93) + (canEtiquetas *2)
-				totalPagar.toFixed(2)
+			totalPagar.toFixed(2)
 			console.log(totalPagar)
 		}
 	})
