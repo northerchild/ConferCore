@@ -1096,6 +1096,20 @@ div.resumen input
     margin: 10px auto;
 }
 
+div#lista_productos
+{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+div#suma-total
+{
+    text-align: center;
+    color: #fe4918;
+    font-size: 2em;
+    font-weight: bold;
+}
+
 /*Fin Resumen y Pagos*/
 /*Fin Seccion de registros*/
 

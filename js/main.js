@@ -14,8 +14,9 @@
 	const calcular = document.getElementById('calcular')
 	const errorDiv = document.getElementById('error')
 	const botonRegistro = document.getElementById('btnRegistro')
-	const resultado = document.getElementById('lista-productos')
+	const lista_productos = document.getElementById('lista_productos')
 	const regalos = document.getElementById('regalo')
+	const suma = document.getElementById('suma-total')
 	//Extras
 	const camisas = document.getElementById('camisa_evento')
 	const etiquetas = document.getElementById('etiquetas')
@@ -34,7 +35,17 @@
 				canCamisas = parseInt(camisas.value, 10)|| 0
 			let totalPagar = (boletoDia * 30) + (boletDosDias * 45) + (boletoCompleto * 50) + ((canCamisas * 10) * .93) + (canEtiquetas *2)
 			totalPagar.toFixed(2)
-			console.log(totalPagar)
+			let listadoProductos = []
+			 if (boletoDia >= 1) {listadoProductos.push(`${boletoDia} Pase por día`)} 
+		 	 if (boletDosDias >= 1) {listadoProductos.push(`${boletDosDias} Pase por 2 días`)}
+			 if (boletoCompleto >= 1) {listadoProductos.push(`${boletoCompleto} Pases completos`)}
+			 if (canCamisas >= 1) {listadoProductos.push(`${canCamisas} Camisas`)}
+			 if (canEtiquetas >= 1) {listadoProductos.push(`${canEtiquetas} Etiquetas`)}
+			lista_productos.innerHTML = ""
+			for (let i = 0; i < listadoProductos.length; i++) {
+				 lista_productos.innerHTML += listadoProductos[i] + "<br />"
+			suma.innerHTML = `$ ${totalPagar}` 
+			}
 		}
 	})
 
