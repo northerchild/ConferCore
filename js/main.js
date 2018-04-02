@@ -3,11 +3,15 @@
 let api = "AIzaSyDzdHUIzETXWp-i-9rlJguJ2s_M_ZwPA7M"
 
 
-let map;
       function initMap() {
-        map = new google.maps.Map(document.getElementById('mapa'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+      	let latLng ={
+      		lat:4.684079,
+    		lng:-74.041489
+      	}
+        let map = new google.maps.Map(document.getElementById('mapa'), {
+          "center": latLng,
+          "zoom": 16,
+          "mapTypeId": google.maps.MapTypeId.ROADMAP
         });
       }
 
