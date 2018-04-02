@@ -1109,7 +1109,16 @@ div#suma-total
     font-size: 2em;
     font-weight: bold;
 }
-
+div#error
+{
+    clear: both;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.3em;
+    color: red;
+    font-weight: bold;
+    display: none;
+}
 /*Fin Resumen y Pagos*/
 /*Fin Seccion de registros*/
 

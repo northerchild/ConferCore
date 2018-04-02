@@ -25,6 +25,40 @@
 	pase_dosdia.addEventListener('blur',mostrarDias)
 	pase_completo.addEventListener('blur',mostrarDias)
 
+	//Validacion de campos del formulario
+	function validarCampos(){
+		if (this.value === "") {
+			errorDiv.style.display = "block"
+			errorDiv.innerHTML = "Este campo es obligatorio"
+			this.style.border = "1px solid red"
+			errorDiv.style.border = "1px solid red"
+		}
+		else
+		{
+			errorDiv.style.display = "none"
+			this.style.border = "1px solid #ccc"
+		}
+	}
+	function validarEmail(){
+		if (email.value.includes("@")) {
+			errorDiv.style.display = "none"
+			this.style.border = "1px solid #ccc"
+		}
+		else
+		{
+			errorDiv.style.display = "block"
+			errorDiv.innerHTML = "Este campo debe contar con una @"
+			this.style.border = "1px solid red"
+			errorDiv.style.border = "1px solid red"
+		}
+	}
+
+	nombre.addEventListener("blur", validarCampos)
+	apellido.addEventListener("blur", validarCampos)
+	email.addEventListener("blur", validarCampos)
+	email.addEventListener("blur", validarEmail)
+
+
 	//Funcion para mostrar dia dependiendo el boleto
 	function mostrarDias(){
 		let boletoDia = parseInt(pase_dia.value, 10)|| 0,
