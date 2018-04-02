@@ -1,3 +1,17 @@
+//MAP API
+
+let api = "AIzaSyDzdHUIzETXWp-i-9rlJguJ2s_M_ZwPA7M"
+
+
+let map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('mapa'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+
+
 (function(){
 	"use strict"
 	document.addEventListener("DOMContentLoaded",function(){
