@@ -13,6 +13,19 @@ let api = "AIzaSyDzdHUIzETXWp-i-9rlJguJ2s_M_ZwPA7M"
           "zoom": 16,
           "mapTypeId": google.maps.MapTypeId.ROADMAP
         });
+        let marker = new google.maps.Marker({
+        	position:latLng,
+        	map:map,
+        	tittle: "CONFERCORE"
+        })
+        let contenido = "<h2>CONFERCORE</h2>"+"<p>Del 10 al 12 de Diciembre</p>"+"<p>Visitanos</p>"
+        let informacion = new google.maps.InfoWindow({
+        	content: contenido
+        })
+
+        marker.addListener("click",()=>{
+        	informacion.open(map, marker)
+        })
       }
 
 
