@@ -152,9 +152,17 @@ $(function(){
 		return false;
 	});
 
-	//Animaciones para los números
+	//Animaciones para los números resumen evento
 	$(".resumen-evento li:nth-child(1) p").animateNumber({number: 6},1500)
 	$(".resumen-evento li:nth-child(2) p").animateNumber({number: 15},1500)
 	$(".resumen-evento li:nth-child(3) p").animateNumber({number: 3},1500)
 	$(".resumen-evento li:nth-child(4) p").animateNumber({number: 9},1500)
+
+	//cuenta regresiva
+	$(".cuenta-regresiva").countdown('2018/12/10 09:00:00', (e)=>{
+		$("#dias").html(e.strftime('%D'))
+		$("#horas").html(e.strftime('%H'))
+		$("#minutos").html(e.strftime('%M'))
+		$("#segundos").html(e.strftime('%S'))
+	})
 })
