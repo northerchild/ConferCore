@@ -167,6 +167,11 @@ $(function(){
 		return false;
 	});
 
+	//Menu responsive
+	$('.menu-movil').on('click',()=>{
+		$('.navegacion-principal').slideToggle()
+	})
+
 	//Animaciones para los números resumen evento
 	$(".resumen-evento li:nth-child(1) p").animateNumber({number: 6},1500)
 	$(".resumen-evento li:nth-child(2) p").animateNumber({number: 15},1500)
