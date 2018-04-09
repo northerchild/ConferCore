@@ -52,9 +52,10 @@ let api = "AIzaSyDzdHUIzETXWp-i-9rlJguJ2s_M_ZwPA7M"
 	const camisas = document.getElementById('camisa_evento')
 	const etiquetas = document.getElementById('etiquetas')
 
-	pase_dia.addEventListener('blur',mostrarDias)
-	pase_dosdia.addEventListener('blur',mostrarDias)
-	pase_completo.addEventListener('blur',mostrarDias)
+	nombre.addEventListener("blur", validarCampos)
+	apellido.addEventListener("blur", validarCampos)
+	email.addEventListener("blur", validarCampos)
+	email.addEventListener("blur", validarEmail)
 
 	//Validacion de campos del formulario
 	function validarCampos(){
@@ -84,11 +85,9 @@ let api = "AIzaSyDzdHUIzETXWp-i-9rlJguJ2s_M_ZwPA7M"
 		}
 	}
 
-	nombre.addEventListener("blur", validarCampos)
-	apellido.addEventListener("blur", validarCampos)
-	email.addEventListener("blur", validarCampos)
-	email.addEventListener("blur", validarEmail)
-
+	pase_dia.addEventListener('blur',mostrarDias)
+	pase_dosdia.addEventListener('blur',mostrarDias)
+	pase_completo.addEventListener('blur',mostrarDias)
 
 	//Funcion para mostrar dia dependiendo el boleto
 	function mostrarDias(){
@@ -139,6 +138,22 @@ let api = "AIzaSyDzdHUIzETXWp-i-9rlJguJ2s_M_ZwPA7M"
 //Jquery
 
 $(function(){
+
+	//Menu movil
+	let windowHeight = $(window).height();
+	let barraAltura = $('.barra').innerHeight()
+	console.log(windowHeight)
+	$(window).scroll(()=>{
+		let scroll = $(window).scrollTop()
+		if (scroll > windowHeight) {
+			$(".barra").addClass("fixed")
+			$("body").css({"margin-top":barraAltura+"px"})
+		}else{
+			$(".barra").removeClass("fixed")
+			$("body").css({"margin-top":"0px"})
+		}		
+	})
+
 	//Controlador de la sección conferencias//
 	$(".programa-evento .info-cursos:first").show();
 	$(".menu-programa a:first").addClass("activo");
