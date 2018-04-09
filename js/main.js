@@ -51,7 +51,7 @@ let api = "AIzaSyDzdHUIzETXWp-i-9rlJguJ2s_M_ZwPA7M"
 	//Extras
 	const camisas = document.getElementById('camisa_evento')
 	const etiquetas = document.getElementById('etiquetas')
-
+	
 	nombre.addEventListener("blur", validarCampos)
 	apellido.addEventListener("blur", validarCampos)
 	email.addEventListener("blur", validarCampos)
@@ -142,7 +142,6 @@ $(function(){
 	//Menu movil
 	let windowHeight = $(window).height();
 	let barraAltura = $('.barra').innerHeight()
-	console.log(windowHeight)
 	$(window).scroll(()=>{
 		let scroll = $(window).scrollTop()
 		if (scroll > windowHeight) {
