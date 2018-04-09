@@ -147,8 +147,14 @@ $(function(){
 		$(".menu-programa a").removeClass("activo");
 		$(this).addClass("activo");
 		$(".ocultar").hide();
-		var enlace = $(this).attr("href");
+		let enlace = $(this).attr("href");
 		$(enlace).fadeIn(1000);
 		return false;
 	});
+
+	//Animaciones para los números
+	$(".resumen-evento li:nth-child(1) p").animateNumber({number: 6},1500)
+	$(".resumen-evento li:nth-child(2) p").animateNumber({number: 15},1500)
+	$(".resumen-evento li:nth-child(3) p").animateNumber({number: 3},1500)
+	$(".resumen-evento li:nth-child(4) p").animateNumber({number: 9},1500)
 })
