@@ -134,3 +134,21 @@ let api = "AIzaSyDzdHUIzETXWp-i-9rlJguJ2s_M_ZwPA7M"
 
 	})//DOM CONTENT LOADED
 })()
+
+
+//Jquery
+
+$(function(){
+	//Controlador de la sección conferencias//
+	$(".programa-evento .info-cursos:first").show();
+	$(".menu-programa a:first").addClass("activo");
+	$(".menu-programa a").on("click", function()
+	{
+		$(".menu-programa a").removeClass("activo");
+		$(this).addClass("activo");
+		$(".ocultar").hide();
+		var enlace = $(this).attr("href");
+		$(enlace).fadeIn(1000);
+		return false;
+	});
+})

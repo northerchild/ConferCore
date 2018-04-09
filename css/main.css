@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -20,9 +20,7 @@ html {
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
  *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
+ * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
 
@@ -96,9 +94,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-/*Globales*/
-
 html
 {
     box-sizing: border-box;
@@ -230,30 +225,80 @@ ul
 }
 }
 
-/**Fin globales/
+/*Lettering*/
+
+h1.nombre-sitio span
+{
+    position: relative;
+    text-shadow: 0 0 30px #000;
+}
+
+@media only screen and (min-width:992px)
+{
+    .char1
+    {
+        top: 20px; right:20;
+    }
+    .char2
+    {
+        top: 0; left: -20px;
+    }
+    .char3
+    {
+        top: 10px; right: 20px;
+    }
+    .char4
+    {
+        top: 5px; right: 10px;
+    }
+    .char5
+    {
+        top: 15px; right: 10px;
+    }
+    .char6
+    {
+        top: 5px; right: 10px;
+    }
+    .char7
+    {
+        top: 20px; right: -10px;
+    }
+    .char8
+    {
+        top: 0px; right: 10px;
+    }
+    .char9
+    {
+        top: 10px; right: 20px;
+    }
+    .char10
+    {
+        top: 20px; right: 20px;
+    }
+}
 
 /*Header*/
 
-.hero
+div.hero
 {
     background-image: url(../img/encabezado.jpg);
-    background-size: cover;
-    background-position: top center;
     height: 100vh;
+    background-size: cover;
+    background-position: center center;
     background-attachment: fixed;
 }
 
-.contenido-header
+div.contenido-header
 {
     padding-top: 40px;
 }
 
-@media only screen and (min-width: 786px)
+@media only screen and (min-width: 768px) 
 {
-  .contenido-header
+    div.contenido-header
     {
         padding-top: 10px;
-    }  
+    }
 }
 
 nav.redes-sociales
@@ -268,22 +313,30 @@ nav.redes-sociales a
     margin-right: 20px;
 }
 
-.informacion-evento
+nav.redes-sociales a:last-child
+{
+    margin-right: 0;
+}
+
+
+div.informacion-evento
 {
     text-align: center;
     color: #fff;
 }
 
-@media only screen and (min-width: 786px){
-    .informacion-evento
+
+@media only screen and (min-width: 768px) 
+{
+    div.informacion-evento
     {
         width: 70%;
         margin: 0 auto;
         margin-top: 50px;
-    }
+    }   
 }
 
-.informacion-evento p 
+div.informacion-evento p
 {
     margin: 0;
     display: inline;
@@ -291,11 +344,10 @@ nav.redes-sociales a
     text-transform: uppercase;
 }
 
-.informacion-evento p i
+div.informacion-evento p i
 {
     color: #fe4918;
-    font-size: 2rem;
-    margin-right: 8px;
+    font-size: 2.5rem
 }
 
 p.fecha
@@ -334,8 +386,10 @@ h1.nombre-sitio
     margin:0;
     line-height: 1;
 }
+
 }
 
+/*Fin del Header*/
 /*Barra*/
 div.barra
 {
@@ -374,39 +428,42 @@ div.logo img
 }
 /*Fin Barra*/
 
-/*Navegacion principal*/
+/*Navegacion Principal*/
 nav.navegacion-principal
 {
     display: none;
+    width: 100%;
 }
 
 nav.navegacion-principal a
 {
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #fff;
     font-size: 1.3em;
     text-transform: uppercase;
     text-decoration: none;
     transition: all .8s ease;
     width: 100%;
-    display: inline-block;
+    display: block;
     text-align: center;
     margin-bottom: 20px;
-}
-
-nav.navegacion-principal a:hover
-{
-    background-color: #fe4918;
+    clear: both;
 }
 
 nav.navegacion-principal a:last-child
 {
     border: 2px solid #fe4918;
-    color: #fe4918;
+    color: #fe4918
 }
+
 nav.navegacion-principal a:last-child:hover
 {
     color: #fff;
+}
+
+nav.navegacion-principal a:hover
+{
+    background-color: #fe4918
 }
 
 @media only screen and (min-width:768px)
@@ -417,18 +474,18 @@ nav.navegacion-principal a:last-child:hover
         float: right;
         text-align: right;
         display: block;
-      }
-      nav.navegacion-principal a
-      {
-        padding: 15px 15px;
-        display: inline-block;
-        width: auto;
-        text-align: center;
-        margin:0 10px 0 0;
       }   
+      nav.navegacion-principal a
+        {
+        margin-right: 10px;
+        padding: 10px 10px;
+        width: auto;
+        display: inline-block;
+        text-align: center;
+        margin: 20px 10px 0 0;
+        }
 } 
-
-/*Fin Navegacion principal*/
+/*Fin Navegacion Principal*/
 
 /*Menu Movil*/
 div.menu-movil
@@ -439,7 +496,6 @@ div.menu-movil
     text-align: center;
     text-align: right;
     margin-top: 12px;
-    padding: 13px 0;
 }
 
 div.menu-movil span
@@ -485,60 +541,76 @@ div.contenido-programa
 
 div.programa-evento
 {
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(255, 255, 255, .8);
     padding: 15px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 @media only screen and (min-width: 768px)
 {
-    div.programa-evento
-    {
-        width: 70%
-    }
+ div.programa-evento
+ {
+    width: 70%;
+ }   
 }
 
 @media only screen and (min-width: 992px)
 {
-    div.programa-evento
-    {
-        width: 50%
-    }
+ div.programa-evento
+ {
+    width: 50%;
+ }   
 }
 
 nav.menu-programa
 {
     width: 100%;
-    border-bottom: 1px solid #fe4918;
-    padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 768px)
 {
-      nav.menu-programa
+    nav.menu-programa
     {
         display: table;
-    }  
+    }
 }
 
-nav.menu-programa a 
+nav.menu-programa a
 {
     display: block;
     text-align: center;
     color: #000;
     text-decoration: none;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Oswald', sans-serif;
     margin-bottom: 10px;
     font-size: 1.2em;
-    margin-right: 10px;
+    position: relative;
+    border-bottom: 1px solid #fe4819;
+}
+
+nav.menu-programa a.activo:after
+{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    width: 30px;
+    background-image: url("../img/talleres-flecha.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    bottom: -20px;
+    padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 768px)
 {
-   nav.menu-programa a 
+    nav.menu-programa a
     {
         display: table-cell;
-    } 
+    }
 }
 
 nav.menu-programa a i,
@@ -549,19 +621,33 @@ div.detalle-evento p i
     margin-right: 10px;
 }
 
-/*Detalles de eventos*/
+div.ocultar
+{
+    display: none;
+}
+/*Fin Talleres*/
+
+/*Detalles evento*/
 
 div.detalle-evento
 {
-    margin-top: : 20px;
+    margin-top: 20px;
     border-bottom: 1px solid #000;
     padding: 0 20px;
 }
+
 div.detalle-evento:nth-child(2)
 {
-    border: none;
+    border:none;
 }
-/*Fin detalles eventos*/
+
+div.detalle-evento p
+{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+/*Fin Detalles evento*/
+
 /*Invatados*/
 
 ul.lista-invitados li
@@ -628,8 +714,6 @@ div.invitado:hover p
 
 /*Fin Invatados*/
 
-/*Fin Talleres*/
-
 /*Contador*/
 
 .parallax:before
@@ -647,6 +731,7 @@ div.invitado:hover p
     -webkit-filter: brightness(.8);
     filter: brightness(.8);
 }
+
 
 div.contador
 {
@@ -693,29 +778,29 @@ p.numero
     margin: 0 0 10px 0;
     font-family: 'Oswald', sans-serif;
 }
-
 /*Fin Contador*/
 
 /*Tabla de precios*/
 ul.lista-precios > li
 {
-    padding: 10px
+    padding: 10px;
 }
-@media only screen and (min-width: 768px){
-     ul.lista-precios > li
+
+@media only screen and (min-width: 768px) {
+    ul.lista-precios > li
     {
         float: left;
         width: 33.3%;
-    }   
+    }
 }
 
 div.tabla-precio
 {
-    border: 1px solid #e1e1e1;
     background-color: #fff;
+    border:1px solid #e1e1e1;
     padding: 40px 0;
     text-align: center;
-    transition: all ease .7s;
+    transition: all .6s ease;
 }
 
 div.tabla-precio:hover
@@ -723,13 +808,6 @@ div.tabla-precio:hover
     transform: scale(1.1);
     border: 1px solid #fe4918;
     box-shadow: 0px 0px 50px #666;
-}
-
-div.tabla-precio h3
-{
-    font-family: 'Oswald',sans-serif;
-    font-family: 16px;
-    text-transform: uppercase;
 }
 
 div.tabla-precio ul li
@@ -754,12 +832,18 @@ div.tabla-precio ul li:before
     content: '\f00c';
 }
 
+div.tabla-precio h3
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
 div.tabla-precio p.numero
 {
     color: #000;
-    margin-top: 20px 0;
+    margin: 20px 0;
 }
-
 /*Fin Tabla de precios*/
 
 /*Mapa*/
@@ -769,44 +853,47 @@ div.mapa
     background-color: green
 }
 /*Fin Mapa*/
+
 /*Testimoniales*/
 div.testimoniales
 {
     padding-bottom: 20px;
 }
+
 div.testimonial
 {
-    padding: 5px;
+    padding: 5px
 }
 
-@media only screen and (min-width: 768px) {
-        div.testimonial
+@media only screen and (min-width: 768px) 
+{
+    div.testimonial
     {
-       float: left;
-       width: 33.3%;
-    }   
+        float: left;
+        width: 33.3%;
+    }    
 }
 
 blockquote
 {
-    border-color: #fff;
+    background-color: #fff;
     border: 1px solid #e1e1e1;
     position: relative;
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 10px 0;
     padding-bottom: 20px;
 }
 
 blockquote p
 {
-    text-align: justify !important; 
-    font-size: 1em !important;
+    text-align: justify!important;
+    font-size: 1em!important;
     font-family: 'PT Sans', sans-serif;
     padding: 0 20px 0 65px;
 }
 
 blockquote p:before
 {
-    content: "\201c";
+    content: '\201c';
     position: absolute;
     left: 13px;
     top: 8px;
@@ -817,10 +904,10 @@ blockquote p:before
     color: #fe4918;
 }
 
-
 footer.info-testimonial
 {
     padding: 0;
+    background-color:#fff!important;
 }
 
 footer.info-testimonial img
@@ -849,11 +936,11 @@ footer.info-testimonial cite span
     color: #000;
     display: block;
     text-transform: none;
-    margin: 5px;
+    margin-top: 5px;
 }
 /*Fin Testimoniales*/
 
-/*NewsLetter*/
+/*Newsletter*/
 div.newsletter
 {
     position: relative;
@@ -862,8 +949,8 @@ div.newsletter
 
 div.newsletter:before
 {
-    content: "";
     background-image: url(../img/bg-newsletter.jpg);
+    content: '';
 }
 
 div.newsletter .contenido
@@ -887,28 +974,31 @@ div.newsletter .contenido h3
     font-size: 7vw;
     font-family: 'PT Sans', sans-serif;
 }
+/*Fin Newsletter*/
 
-/*Fin NewsLetter*/
+/*Cuenta Regresiva*/
 div.cuenta-regresiva ul li
 {
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
-    font-size: 1.6em;
+    font-size: 2rem;
     text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px)
+{
     div.cuenta-regresiva ul li
     {
         width: 25%;
         float: left;
     }
 }
-/*Cuenta Regresiva*/
+/*Fin Cuenta Regresiva*/
 /*Footer*/
-footer.site-footer
+
+footer
 {
-    background: #353535;
+    background-color: #353535;
     padding-top: 40px;
     margin-top: 20px;
 }
@@ -916,16 +1006,16 @@ footer.site-footer
 footer .contenedor > div
 {
     color: #fff;
-    padding: 0px 20px;
+    padding: 0 20px;
     font-size: 12px;
 }
 
 @media only screen and (min-width: 768px) {
-    footer .contenedor > div
-    {
-        width: 33.3%;
-        float: left;
-    }
+footer .contenedor > div
+{
+    width: 33.3%;
+    float: left;
+}  
 }
 
 footer h3
@@ -936,7 +1026,12 @@ footer h3
     margin-bottom: 20px;
 }
 
-footer .ultimos-tweets li 
+footer h3 span
+{
+    color: #fe4918;
+}
+
+footer .ultimos-tweets li
 {
     margin-bottom: 10px;
 }
@@ -946,30 +1041,38 @@ footer nav.redes-sociales
     text-align: left;
 }
 
-footer h3 span 
-{
-    color: #fe4918
-}
-
 p.copyright
 {
-    background-color: #2e2e2e;
-    text-align: center;
+    background: #2e2e2e;
+    padding:10px 0;
     color: #fff;
-    padding: 20px;
+    text-align: center;
     margin: 20px 0 0 0;
 }
-
 /*Fin Footer*/
 
-/*Seccion de registros*/
+/*Inicio Pagina de Registro*/
+/*Internas*/
+/*Conferencia*/
+
+body.conferencia .navegacion-principal .activo
+{
+    border-bottom: 2px solid #fe4918;
+}
+
+div.galeria a
+{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/*Fin Conferencia*/
+
 form.registro h3
 {
     text-align: center;
     text-transform: uppercase;
     margin: 20px 0 0 0;
-    padding-bottom: 12px;
-    font-size: 1.4em;
 }
 
 form.registro label
@@ -983,14 +1086,14 @@ h4
     text-align: center;
     text-transform: uppercase;
     border-bottom: 2px solid #fe4918;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     font-size: 1.2em;
 }
 
 div.caja
 {
-    background: #fff;
-    border: solid 1px #e1e1e1;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
     padding: 10px;
     margin: 10px;
 }
@@ -1000,13 +1103,14 @@ div.campo
     padding: 20px;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
     div.campo
-    {
+    {   
         float: left;
         width: 33.3%;
     }
 }
+
 
 div.paquetes .tabla-precio:hover
 {
@@ -1022,50 +1126,51 @@ div.paquetes .tabla-precio input
     display: block;
 }
 
-div.contenido-dia
+.contenido-dia
 {
     padding: 20px;
     display: none;
 }
 
-@media only screen and (min-width: 768px) {
-    div.contenido-dia > div
-    {
-        float: left;
-        width: 33.3%;
-    }
+@media only screen and (min-width: 768px)
+{
+    .contenido-dia > div
+        {
+          float: left;
+          width: 33.3%;
+        }   
 }
 
- div.contenido-dia > div p
- {
+.contenido-dia > div p
+{
     text-align: left;
- }
+}
 
-div.contenido-dia > div label
-  {
-    margin-bottom: 10px;
+.contenido-dia > div label
+{
     display: block;
-  }
+    margin-bottom: 10px;
+}
 
-div.contenido-dia > div input
+.contenido-dia > div input
 {
     margin-right: 10px;
-} 
+}
 
-div.contenido-dia > div time
+.contenido-dia > div label time
 {
     color: #fe4918;
     font-weight: bold;
-    margin-right: 4px;
-} 
-/*Resumen y Pagos*/
-div.resumen p
+}
+
+/*Resumen registro*/
+div.resumen p 
 {
     font-size: 1.2em;
     text-transform: uppercase;
 }
 
-div.resumen div.extras
+div.resumen div.extras 
 {
     float: left;
     width: 50%;
@@ -1095,32 +1200,77 @@ div.resumen input
     display: block;
     margin: 10px auto;
 }
+#lista_productos
+{
+    background-color: #e1e1e1;
+    padding: 20px;
+    display: none;
+}
 
-div#lista_productos
+#suma-total
 {
     text-align: center;
-    font-size: 1.3em;
-    font-weight: bold;
-}
-div#suma-total
-{
-    text-align: center;
-    color: #fe4918;
     font-size: 2em;
-    font-weight: bold;
+    color: #fe4918;
 }
-div#error
+
+#error
 {
     clear: both;
     padding: 20px;
     text-align: center;
-    font-size: 1.3em;
-    color: red;
-    font-weight: bold;
+    font-size: 1.2em;
+    color:#fe4819;
     display: none;
 }
-/*Fin Resumen y Pagos*/
-/*Fin Seccion de registros*/
+
+/*Inicio Calendario*/
+
+div.calendario::after 
+{
+  clear: both;
+  display: block;
+  content: '';    
+}
+
+div.dia {
+  width: 50%;
+  float: left;
+  border: 2px solid #e1e1e1;  
+  transition: all .6s ease; 
+}
+@media only screen and (min-width:768px) {
+  div.dia {
+    width: 33.3%;
+    min-height: 240px;
+    padding-top: 20px;
+  }
+}
+
+div.dia:hover 
+{
+    background-color: #e1e1e1; 
+    -webkit-transform:scale(1.1);
+}
+
+div.dia p.titulo
+{
+    color: #fe4918;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+div.dia p
+{
+    font-size: 1em;
+}
+
+div.dia i
+{
+    color: #fe4918;
+    font-size: 1.5em;
+}
+/*Fin Calendario*/
 
 /* ==========================================================================
    Helper classes
@@ -1136,25 +1286,18 @@ div#error
 
 /*
  * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
     height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
     position: absolute;
     width: 1px;
-    white-space: nowrap; /* 1 */
 }
 
 /*
@@ -1166,14 +1309,11 @@ div#error
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
     height: auto;
     margin: 0;
     overflow: visible;
     position: static;
     width: auto;
-    white-space: inherit;
 }
 
 /*
@@ -1232,7 +1372,9 @@ div#error
 @media print {
     *,
     *:before,
-    *:after {
+    *:after,
+    *:first-letter,
+    *:first-line {
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
@@ -1263,9 +1405,6 @@ div#error
         content: "";
     }
 
-    pre {
-        white-space: pre-wrap !important;
-    }
     pre,
     blockquote {
         border: 1px solid #999;
@@ -1284,6 +1423,10 @@ div#error
     tr,
     img {
         page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
     }
 
     p,
